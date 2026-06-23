@@ -138,7 +138,35 @@ cd ecom-ai-002
 npm install
 ```
 
-### 2. Seed sample data (optional)
+### 2. Environment variables
+
+Create `.env.local`:
+
+```env
+# Sanity
+NEXT_PUBLIC_SANITY_PROJECT_ID=
+NEXT_PUBLIC_SANITY_DATASET=
+NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
+SANITY_API_READ_TOKEN=
+SANITY_API_WRITE_TOKEN=
+
+# Clerk
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+# Stripe
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+
+# App
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+# AI (Vercel AI Gateway)
+AI_GATEWAY_API_KEY=
+```
+
+### 3. Seed sample data (optional)
 
 Import the included sample dataset into your Sanity project:
 
@@ -146,7 +174,7 @@ Import the included sample dataset into your Sanity project:
 npx sanity dataset import sample-data.ndjson production
 ```
 
-### 3. Run locally
+### 4. Run locally
 
 ```bash
 npm run dev
